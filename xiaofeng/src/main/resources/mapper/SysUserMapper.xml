@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.xiaofeng.dao.SysUserMapper">
+ <select id="getByNameAndPassword" resultType="com.example.xiaofeng.entity.SysUser">
+   select  * from sys_user where usercode=#{usercode}  and password=#{username}
+ </select>
+    <select id="findByUserid" resultType="com.example.xiaofeng.entity.SysUser">
+        select  * from sys_user where id=#{userid}
+    </select>
+    <select id="findByUsercode" resultType="com.example.xiaofeng.entity.SysUser">
+select  * from sys_user where usercode=#{usercode}
+    </select>
+</mapper>
